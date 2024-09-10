@@ -1,115 +1,155 @@
-// //примитивы
-// //string, number, boolean, null, undefined, symbol, BigInt
+// примитивы
 //
-// //ссылочные типы данных
-// //object, array, function  /class,  map, set
-//
-// const user = {} //литерал объекта
-//
-// // let person = new Object();
-// // person.name = 'John';
-// // person.age = 30
-// // console.log("person age:", person)
-//
-// const user1 = { // в переменной у нас хранится ссылка на объект
-//     name: "Bob",
-//     age: 32,
-//     isStudent: false
+
+
+// ссылочные
+// object, array, function
+
+// Особенности ссылочных типов данных
+
+// Более сложная структура
+// Имеют свойства и методы
+// Ссылочный тип
+
+// const users1 = {
+//     // 123456
+//     id: 1,
+//     name: 'Bob',
+//     isStudent: true,
 // }
-// console.log(user1)
+// // прямое копирование
+// users2a = users1
+// console.log(users1 === users2a)
 //
-// const user2=user1
-// user2.name = 'Alex'
-// console.log(user1.name)
-// console.log(user1)
-// console.log(user1 === user2)
-//
-//
-// const user1Copy = {
-//     name: user1.name,
-//     age:user1.age,
-//     isStudent: user1.isStudent
+// // так делали раньше
+// const users2 = {
+//     id: users1.id,
+//     name: users1.name,
+//     isStudent: users1.isStudent,
 // }
 //
-// console.log(user1 === user1Copy)
-//
-// const user2Copy = {...user1}
-// user2Copy.name = 'Alex'
-// console.log(user1 === user2Copy)
+// console.log(users1 === users2)  // true
+
+// const a = []
+// const b = a
+// console.log(a === b)
+
+// spread operator
+// const users1 = {
+//     // 123456
+//     id: 1,
+//     name: 'Bob',
+//     isStudent: true,
+// }
+// const users2 = {...users1}  // #444
+// console.log('users2 :', users2)
+// console.log(users2 === users1) // false это разные объекты
 
 // const users = [
 //     {
 //         id: 1,
-//         name: 'Bob',
+//         name: "Johan",
 //         isStudent: true,
 //     },
 //     {
 //         id: 2,
-//         name: 'Alex',
-//         isStudent: true,
+//         name: "Anna",
+//         isStudent: false,
 //     },
 //     {
 //         id: 3,
-//         name: 'Ann',
+//         name: "Peter",
 //         isStudent: true,
 //     },
 //     {
 //         id: 4,
-//         name: 'Donald',
-//         isStudent: true,
+//         name: "Maria",
+//         isStudent: false,
+//     }
+// ];
+
+// const result1 = [...users].pop()
+// console.log('users: ', users)
+
+// const superUser = {
+//     id: 1,
+//     name: "Admin",
+//     role: "superuser",
+//     permissions: {
+//         canEdit: true,
+//         canDelete: true,
+//         canCreate: true,
 //     },
-// ]
-// console.log(users)
-// users.pop()
-// console.log(users)
+//     profile: {
+//         email: "admin@example.com",
+//         phone: "+1234567890",
+//         address: {
+//             street: "123 Admin St",
+//             city: "Admin City",
+//             country: "Adminland",
+//         },
+//     },
+//     settings: {
+//         theme: "dark",
+//         notifications: {
+//             email: true,
+//             sms: false,
+//         },
+//     },
+// };
 
-// const newArr = [...users]
-// console.log(newArr)
-// const usersCopy = [...users].pop()
-// console.log(usersCopy)
+// const superUserCopy = {...superUser}
+// superUserCopy.profile.address.city = 'Moscow'
+// console.log(superUser.profile.address.city)
+// console.log(superUserCopy.profile.address.city)
+// console.log(superUser.profile.address.city === superUserCopy.profile.address.city)
+//
+// // правильная копия глубокая
+// const superUserCopy2 = {
+//     ...superUser,
+//     profile: {...superUser.profile, address: {...superUser.profile.address, city: 'Minsk'}}
+// }
+// console.log(superUserCopy2.profile.address.city) // город изменён
+// console.log(superUser.profile.address.city)      // город исходный
 
 
-const superUser = {
-    id: 10,
-    name: 'Clementina DuBuque',
-    username: 'Moriah.Stanton',
-    email: 'Rey.Padberg@karina.biz',
-    address: {
-        street: 'Kattie Turnpike',
-        suite: 'Suite 198',
-        city: 'Lebsackbury',
-        zipcode: '31428-2261',
-        geo: {
-            lat: '-38.2386',
-            lng: '57.2232',
-        },
-    },
-    phone: '024-648-3804',
-    website: 'ambrose.net',
-    company: {
-        name: 'Hoeger LLC',
-        catchPhrase: 'Centralized empowering task-force',
-        bs: 'target end-to-end models',
-    },
+// const superUser = {
+//     id: 1,
+//     name: "Admin",
+//     role: "superuser",
+//     permissions: {
+//         canEdit: true,
+//         canDelete: true,
+//         canCreate: true,
+//     },
+//     profile: {
+//         email: "admin@example.com",
+//         phone: "+1234567890",
+//         address: {
+//             street: "123 Admin St",
+//             city: "Admin City",
+//             country: "Adminland",
+//         },
+//     },
+//     settings: {
+//         theme: "dark",
+//         notifications: {
+//             email: true,
+//             sms: false,
+//         },
+//     },
+// };
+
+// const structuredCloneCopy = structuredClone(superUser)
+// structuredCloneCopy.profile.address.country = 'Lipetck'
+// console.log(superUser)
+// console.log(structuredCloneCopy)
+// console.log(superUser === structuredCloneCopy)
+
+
+// деструктуризация
+const employee = {
+    firstName: 'Ivan',
+    lastName: 'Ivanov',
+    middleName: 'Ivanovich'
 }
-
-const user1Copy = { ...superUser }
-user1Copy.address.city = 'London'
-console.log('userCopy', user1Copy.address.city) //London
-console.log('superUser', superUser.address.city) //London
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

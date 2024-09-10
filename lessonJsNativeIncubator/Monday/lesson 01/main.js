@@ -148,8 +148,116 @@
 
 
 // деструктуризация
-const employee = {
-    firstName: 'Ivan',
-    lastName: 'Ivanov',
-    middleName: 'Ivanovich'
-}
+
+// 1
+// const employee = {
+//     firstName: 'Ivan',
+//     lastName: 'Ivanov',
+//     middleName: 'Ivanovich'
+// }
+
+// const firstName = employee.firstName
+// console.log(firstName)
+
+// const {firstName, lastName} = employee
+
+// 2
+
+// const employee = {
+//     firstName: 'Ivan',
+//     lastName: 'Ivanov',
+//     middleName: 'Ivanovich'
+// }
+//
+// const firstName = 'Nina'
+// const {firstName: name, lastName} = employee
+//
+// console.log(firstName)
+// console.log(name)
+
+// 3
+
+// const user = {
+//     firstName: 'Ivan',
+//     lastName: 'Ivanov',
+//     middleName: 'Ivanovich',
+//     //role: 'admin'
+// }
+//
+// const {middleName,role = 'welcome user'} = user
+// console.log('role ', role)
+
+// const user = {
+//     firstName: undefined,
+//     lastName: 'Ivanov',
+//     middleName: 'Ivanovich',
+//     role: 'admin'
+// }
+
+// const {middleName,role = 'welcome user'} = user
+// console.log('role ', role)
+// const {firstName = 'Max'} = user
+// console.log(user.firstName)
+// console.log('firstName:', firstName)
+
+
+// 4
+
+// const employee = {
+//     firstName: 'Ivan',
+//     lastName: 'Ivanov',
+//     middleName: 'Ivanovich',
+//     message: 'Hello World',
+//     permission: {
+//         canEdit: true,
+//         canDelete: false,
+//         role: 'user'
+//     }
+// }
+// const {firstName, permission: {canDelete, canEdit}} = employee
+// console.log('canDelete :', canDelete)
+// console.log('canEdit :', canEdit)
+
+
+// 5 array
+
+// const colors = ['red', 'blue', 'green', 'white', 'black'];
+//
+// // const firsName = colors[0]
+// // console.log(firsName)
+//
+// const [firstElement, secondElement, greenColor] = colors // работает по индексам
+// console.log(firstElement)  // red
+// console.log(secondElement) // blue
+// console.log(greenColor)  // green
+
+// const colors = ['red', 'blue', 'green', 'white', 'black'];
+//
+// const [firstValue,secondValue, ,whiteValue] = colors // знаком запятая ( , ) мы пропускаем индекс массива
+// console.log(secondValue)
+// console.log(whiteValue)
+
+// 6
+
+// const colors = ['red', ['first value', 'second value'], 'green', 'white', 'black'];
+//
+// const [firstValue, [nestedValue1, nestedValue2], thirdValue, ,blackValue] = colors
+// console.log(firstValue)
+// console.log(nestedValue1)
+// console.log(nestedValue2)
+// console.log(thirdValue)
+// console.log(blackValue)
+
+
+// 7
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+//
+// function Hello([firstValue, ...rest]) {
+//     console.log('firstValue: ', firstValue);
+//     console.log('...rest: ', rest)
+// }
+//
+// Hello(arr)
+
+

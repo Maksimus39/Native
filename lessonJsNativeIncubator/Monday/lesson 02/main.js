@@ -112,10 +112,105 @@
 
 // popular task
 
-const telephoneNumber = '123456789'
-const res = telephoneNumber.split('').reverse().join(' ')
-console.log(res)
+// const telephoneNumber = '123456789'
+// const res = telephoneNumber.split('').reverse().join(' ')
+// console.log(res)
 
+
+// concat - объединение массивов и не мутирует исходник
+
+// 1
+// const arr = [1, 2]
+// const arr2 = [3, 4]
+// const arr3 = [5, 6]
+//
+// const resArr = arr.concat(arr2,arr3)
+//
+// console.log('resArr:',resArr) // resArr: [ 1, 2, 3, 4, 5, 6 ]
+
+// 2
+// const arr1 = [1, 2]
+// const arr2 = [3, 4]
+//
+// const nestedArr = [
+//     [5, 6],
+//     [7, 8]
+// ]
+//
+// const result = arr1.concat(arr2,nestedArr)
+// console.log('result', result)
+
+
+// flat() - позволяет убрать вложенности
+
+// const nestedArr = [
+//     [5, 6],
+//     [7, 8]
+// ]
+//
+// const flatRes = nestedArr.flat() // infinity - уберёт все вложенности
+// console.log('flatRes:',flatRes)
+
+
+// forEach()
+
+// arr.forEach(function( el , index, arr)=>{
+//
+// )
+
+// const arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+// arr.forEach(function (el) {
+//     sum += el // sum = sum + el
+//
+// })
+// console.log('sum:', sum)
+
+
+// indexOff
+
+// const arr = [1, 2, 3, 4, 5];
+// const res = arr.indexOf(3)
+// // const res = arr.indexOf(6) // -1
+// console.log('res:', res)
+
+
+
+// lastIndexOff()
+
+// const arr = [1, 2, 3, 4, 5];
+// const res = arr.lastIndexOf(5)
+// console.log(res)
+
+
+// find()
+
+// 1
+// const strArr = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+// const res = strArr.find((el)=>{
+//     return el.length === 6
+// })
+// console.log(res)
+
+
+
+// 2
+// const arr = [1, 2, 3, 4, 5];
+// const res = arr.find((el)=>{
+//     return el%2 === 1
+// })
+//
+// console.log('res', res)
+
+
+
+// 3
+const arr = [1, 2, 3, 4, 5];
+const res = arr.find((el)=>{
+    return el === 6
+})
+
+console.log('res', res)
 
 
 

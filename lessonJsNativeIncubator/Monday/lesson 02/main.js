@@ -175,7 +175,6 @@
 // console.log('res:', res)
 
 
-
 // lastIndexOff()
 
 // const arr = [1, 2, 3, 4, 5];
@@ -193,7 +192,6 @@
 // console.log(res)
 
 
-
 // 2
 // const arr = [1, 2, 3, 4, 5];
 // const res = arr.find((el)=>{
@@ -203,14 +201,60 @@
 // console.log('res', res)
 
 
+// 3
+// const arr = [1, 2, 3, 4, 5];
+// const res = arr.find((el)=>{
+//     return el === 6
+// })
+//
+// console.log('res', res)
+
+
+// includes() - просто ищет элемент
+
+// const num = [1, 2, 3, 4, 5];
+// const res = num.includes(3)
+// console.log(res)
+
+
+// filter()
+
+// const strArr = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+// const res = strArr.filter((str)=>{
+//    return str.length <= 9
+// })
+// console.log('res: ',res)
+
+// sort()
+
+// 1 может сортировать без доп параметров unicode
+
+// const names = ['Alex', '!alex', 'alex', 'Виктор', 'Dimych', 'Valera', 'Igor', 'Ignat']
+// console.log(names.sort())
+
+
+// 2 мутирует исходный массив
+
+// const numbers = [1, 4, 7, 3, 9, 0, 22, 65, 36, 73, 890, 345, 578];
+// console.log(numbers.sort())
 
 // 3
-const arr = [1, 2, 3, 4, 5];
-const res = arr.find((el)=>{
-    return el === 6
-})
 
-console.log('res', res)
+// по возрастанию
+
+// const numbers = [1, 4, 7, 3, 9, 0, 22, 65, 36, 73, 890, 345, 578];
+// console.log(numbers.sort((a, b) => a - b));
+
+// по убыванию
+
+// const numbers = [1, 4, 7, 3, 9, 0, 22, 65, 36, 73, 890, 345, 578];
+// console.log(numbers.sort((a, b) => b - a));
+
+
+// strings
+
+
+
 
 
 

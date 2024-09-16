@@ -252,6 +252,69 @@
 
 
 // strings
+// const users = [
+//     {
+//         id: 1,
+//         name: 'Bob',
+//         isStudent: true
+//     },
+//     {
+//         id: 2,
+//         name: 'Alex',
+//         isStudent: true
+//     },
+//     {
+//         id: 3,
+//         name: 'alex',
+//         isStudent: true
+//     }
+// ]
+//
+// console.log(users.sort((a, b) => a.name.localeCompare(b.name)));
+
+
+// toSorted()  -- иммутабельно
+
+// const users = [
+//     {
+//         id: 1,
+//         name: 'Bob',
+//         isStudent: true
+//     },
+//     {
+//         id: 2,
+//         name: 'Alex',
+//         isStudent: true
+//     },
+//     {
+//         id: 3,
+//         name: 'Ann',
+//         isStudent: true
+//     },
+//     {
+//         id: 4,
+//         name: 'Donald',
+//         isStudent: true
+//     }
+// ]
+
+// const res = users.map((us)=>us.name)
+// console.log('res: ', res)
+
+
+// polifile
+
+// function newMap(arr, callback) {
+//     const result = []
+//     for (let i = 0; i < arr.length; i++) {
+//         result.push(callback(arr[i], i, arr));
+//     }
+//     return result
+// }
+//
+// const result = newMap(users, (user)=>user.name)
+// console.log(result)
+
 
 
 

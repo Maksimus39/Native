@@ -64,8 +64,20 @@
 
 // 1
 
-let arr = ['a', 'b', 'c', 'd', 'e', 'f'];
-const nevString = arr.reduce()
+//         reduce(function(acc, item, index) {}, [])
+//         reduce(function(acc, item, index) {}) - стартовое значение acc a[0] так как не указали его через запятую
+
+
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.reduce(function (acc, current) {
+//     console.log('acc: ', acc)
+//     console.log('current: ', current)
+//     return acc + current
+// }, 0)
+// console.log(result);
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 

@@ -79,6 +79,98 @@
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// task 2
+
+// const fruits = [
+//     {name: 'apple', quantity: 2},
+//     {name: 'banana', quantity: 3},
+//     {name: 'orange', quantity: 1}
+// ]
+//
+// const totalQuantity = fruits.reduce(function (acc, fruit) {
+//     return acc + fruit.quantity
+// }, 0)
+// console.log(totalQuantity)
 
 
+// 3
 
+// const numbers = [5, 6, 7, 10, 6, 7];
+// const maxNumbers = numbers.reduce(function (accumulator, number) {
+//     return number > accumulator ? number : accumulator;
+// },numbers[0]) // можем не указывать так как по дефолту numbers[0]
+// console.log(maxNumbers)
+//
+//
+// const minNumbers = numbers.reduce(function (accumulator, number) {
+//     return number < accumulator ? number : accumulator;
+// },numbers[0]) // можем не указывать так как по дефолту numbers[0]
+// console.log(minNumbers)
+
+// 4
+
+// const people = [
+//     {name: 'Alice', age: 25},
+//     {name: 'Bob', age: 30},
+//     {name: 'Charlie', age: 22}
+// ] // {names: [...], totalAges: 0}
+//
+// const result = people.reduce(
+//     function (acc, user) {
+//         acc.names.push(user.name)
+//         acc.totalAges += user.age
+//         return acc
+//     }, {names: [], totalAges: 0})
+//
+// console.log('result: ', result)
+
+// 5
+
+// const people = [
+//     {name: 'Vika', age: 25, budget: 4500},
+//     {name: 'Nikita', age: 45, budget: 35000},
+//     {name: 'Igor', age: 55, budget: 340},
+//     {name: 'Insaf', age: 65, budget: 50000},
+//     {name: 'Alyona', age: 75, budget: 20}
+// ] // budget count
+//
+// const BudgetPeople = people.reduce(function (acc, many) {
+//     return acc + many.budget
+// }, 0)
+// console.log("BudgetPeople: ", BudgetPeople)
+
+// 6
+
+// const people = [
+//     {name: 'Vika', age: 25, budget: 4500},
+//     {name: 'Nikita', age: 45, budget: 35000},
+//     {name: 'Igor', age: 55, budget: 340},
+//     {name: 'Insaf', age: 65, budget: 50000},
+//     {name: 'Alyona', age: 75, budget: 20}
+// ] // {totalBudget: [], names:[]}
+//
+// const result = people.reduce((acc, person) => {
+//     acc.totalBudget.push(person.budget)
+//     acc.names.push(person.name)
+//     return acc
+// }, {totalBudget: [], names: []})
+//
+// console.log('result: ', result)
+
+// 7
+
+// const words = ['Hello', ' ', 'world', '!'] // Hello world!
+// const string = words.reduce(function (acc, str) {
+//     return acc + str
+// }, '')
+// console.log(string)
+// console.log(typeof string)
+
+// 8
+
+// const arr = [9, 20, 30, 60, 7, 12]
+//
+// const minNumber = arr.reduce(function (acc, num) {
+//     return num < acc ? num : acc
+// }, arr[0])
+// console.log(minNumber)

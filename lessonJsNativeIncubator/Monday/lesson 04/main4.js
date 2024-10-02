@@ -227,7 +227,7 @@
 //
 // // ------------------------------------
 
-let numbers = [1, 1, 1, 3, 4, 5, 6, 76, 7, 8, 9, 0, 6]
+//let numbers = [1, 1, 1, 3, 4, 5, 6, 76, 7, 8, 9, 0, 6]
 
 // let uniqueNumbers = new Set(numbers);
 // console.log(uniqueNumbers)  // Set(10) { 1, 3, 4, 5, 6, 76, 7, 8, 9, 0 }
@@ -236,8 +236,8 @@ let numbers = [1, 1, 1, 3, 4, 5, 6, 76, 7, 8, 9, 0, 6]
 // console.log(newArr)         // [1, 3, 4, 5, 6, 76, 7, 8, 9, 0]
 
 // or
-let result = [...new Set(numbers)]
-console.log(result)    // // [1, 3, 4, 5, 6, 76, 7, 8, 9, 0]
+// let result = [...new Set(numbers)]
+// console.log(result)    // // [1, 3, 4, 5, 6, 76, 7, 8, 9, 0]
 
 
 

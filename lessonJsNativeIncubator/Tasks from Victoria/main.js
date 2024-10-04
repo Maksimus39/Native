@@ -275,6 +275,140 @@
 // console.log(doubleNumber)
 
 
+// --------------------------------------------------------- lesson 1 --------------------------------------------------------
+
+// 1
+
+// const a = {};
+// const b = {};
+// const c = a;
+// const d = c;
+//
+// console.log(a === b);  // false
+// console.log(a === c);  // true
+// console.log(c === d);  // true
+// console.log(a === c);  // true
+
+
+// 2
+
+// const a = {};
+// const b = a;
+// b['test'] = 'test value';
+//
+// console.log(b === a);  // true
+// console.log(a);        // ['test'] = 'test value';
+// // смутриурет ли объект a?
+
+
+// 3
+
+// const user = {
+//     name: 'John',
+//     address: {
+//         city: 'New York',
+//         country: 'USA',
+//     },
+// };
+//
+// const updatedUser = {
+//    ...user,
+//     address: {
+//        ...user.address,city: 'Toronto'
+//     }
+// };
+//
+// console.log(updatedUser);
+
+
+// 4
+
+// const originalArray = [1, 2, 3, 4, 5];
+//
+// function addElementToArray(arr, element) {
+//     return [...arr,element]
+// }
+//
+// const newArray = addElementToArray(originalArray, 6);
+//
+// console.log(newArray);
+// // Ожидаемый вывод: [1, 2, 3, 4, 5, 6]
+
+
+// 5 Задачи для отработки деструктуризации
+
+// const user = {name: 'John', age: 25, city: 'New York'};
+// const name = user.name
+// const age = user.age
+// const city = user.city
+//
+//
+// console.log(name);  // 'John'
+// console.log(age);   // 25
+// console.log(city);  // 'New York'
+
+
+// 6
+
+// const fruits = ['apple', 'banana', 'orange'];
+//
+// const secondFruit = fruits[1]
+// const thirdFruit = fruits[2]
+//
+// console.log(secondFruit);  // 'banana'
+// console.log(thirdFruit);   // 'orange'
+
+
+// 7 Использовать деструктуризацию в параметрах функции
+
+// const person = { name: 'Alice', age: 30 };
+//
+// // Деструктуризация в параметрах функции
+// function printPersonDetails({name, age}) {
+//     console.log(`Name: ${name}, Age: ${age}`);
+// }
+//
+// printPersonDetails(person);  // Вывод: Name: Alice, Age: 30
+
+
+// 8 Установите значение по умолчанию для свойства year которого нет в объекте car
+
+// const car = {brand: 'Toyota', model: 'Camry'};
+//
+// const brand = car.brand;
+// const model = car.model;
+// const year = car.year = 2022;
+//
+// console.log(brand);  // 'Toyota'
+// console.log(model);  // 'Camry'
+// console.log(year);   // 2022 (значение по умолчанию)
+
+// 9 Извлечь значения из массива объектов
+
+// const students = [
+//     { name: 'Alex', grade: 'A' },
+//     { name: 'Emma', grade: 'B' },
+//     { name: 'Chris', grade: 'C' },
+// ];
+// const student1 = students[0].name
+// const student3 = students[2].name
+//
+// console.log(student1);  // 'Alex'
+// console.log(student3);  // 'Chris'
+
+// 10 Установите значение по умолчанию для свойства age которого нет в объекте person
+//  и переименовать переменные, чтобы достать значение с свойства firstName
+
+const person = { firstName: 'Max', lastName: 'Johnson' };
+
+// const firstName = 'first Name: Nina';
+// const lastName = 'last Name: Ivanov';
+//
+// const { firstName: nameVariable, lastName: lastNameVariable, age = 25 } = person;
+//
+// console.log(nameVariable); // 'Max'
+// console.log(lastNameVariable); // 'Johnson'
+// console.log(age); // 25 (значение по умолчанию)
 
 
 

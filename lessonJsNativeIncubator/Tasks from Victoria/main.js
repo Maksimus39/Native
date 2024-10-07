@@ -265,7 +265,6 @@
 // console.log(isPalindrome('hello'))
 
 
-
 // let arr = [1, 1, 5, 6, 7, 8, 9, 9, 3, 4, 0, 19];
 //
 // const doubleNumber = arr.filter((el,index)=>{
@@ -399,7 +398,7 @@
 // 10 Установите значение по умолчанию для свойства age которого нет в объекте person
 //  и переименовать переменные, чтобы достать значение с свойства firstName
 
-const person = { firstName: 'Max', lastName: 'Johnson' };
+const person = {firstName: 'Max', lastName: 'Johnson'};
 
 // const firstName = 'first Name: Nina';
 // const lastName = 'last Name: Ivanov';
@@ -409,6 +408,162 @@ const person = { firstName: 'Max', lastName: 'Johnson' };
 // console.log(nameVariable); // 'Max'
 // console.log(lastNameVariable); // 'Johnson'
 // console.log(age); // 25 (значение по умолчанию)
+
+
+// --------------------------------------------------------- lesson 3 -------------------------------------------------------
+
+
+// 1 Напишите функцию, которая получает подстроку из строки, начиная с определенного индекса
+
+// function getSubStr(str, startIndex) {
+//  return str.slice(startIndex)
+// }
+//
+// console.log(getSubStr('Hello, world', 7))
+
+
+// 2 Напишите функцию, которая возвращает последние n элементов массива
+
+
+// function getLastElements(start, endIndex) {
+//     return start.slice(-endIndex)
+// }
+//
+// console.log(getLastElements([1, 2, 3, 4, 5], 3)); // Выведет: [3, 4, 5]
+
+
+//3 Создайте функцию, которая извлекает часть пути URL-адреса, начиная с указанного индекса.
+
+// function extractPath(url, startIndex) {
+//     return url.slice(startIndex)
+// }
+//
+// console.log(extractPath('https://example.com/blog/article', 19)); // Выведет: "/blog/article"
+
+
+// 4  Напишите функцию, которая принимает массив и индекс элемента для удаления, а затем удаляет этот элемент из массива, модифицируя его
+
+// function removeElement(arr, index) {
+//     arr.splice(index, 1)
+//     return arr
+// }
+//
+// let numbers = [1, 2, 3, 4, 5];
+// console.log(removeElement(numbers, 2)); // Выведет: [1, 2, 4, 5]
+
+
+// 5 Создайте функцию, которая принимает массив, индекс и новый элемент, а затем вставляет новый элемент в указанную позицию массива
+
+// let numbers = [1, 2, 4, 5];
+//
+// function insertElement(arr, oldEl, newEl) {
+//     arr.splice(oldEl, 0, newEl);
+//     return arr;
+// }
+//
+// console.log(insertElement(numbers, 2, 3)); // Выведет: [1, 2, 3, 4, 5]
+
+
+// 6 Задачи на reduce: 1)	Напишите функцию, которая принимает массив чисел и использует метод reduce, чтобы вернуть сумму всех элементов в массиве
+
+// let numbers = [1, 2, 3, 4, 5];
+//
+// function sumArray(arr) {
+//     return arr.reduce((acc, cur) => {
+//         return acc + cur;
+//     }, 0)
+// }
+//
+// console.log(sumArray(numbers)); // Выведет: 15
+
+
+// 7 Создайте функцию, которая принимает массив строк и возвращает сумму их длин, используя метод reduce
+
+
+// function sumStringLengths(strLength) {
+//     return strLength.reduce((acc, curr) => acc + curr.length, 0);
+// }
+//
+// console.log(sumStringLengths(['apple', 'banana', 'cherry'])); // Выведет: 17
+
+
+// 8 Напишите функцию, которая принимает массив, содержащий вложенные массивы чисел, и возвращает сумму всех чисел в этих массивах
+
+// function sumNestedArrays(arrNumbers) {
+// return arrNumbers.reduce((acc, cur)=>{
+//     // Выравниваем вложенные массивы в один массив
+//     const flatArray = arrNumbers.flat();
+//     // Суммируем все элементы массива
+//     return flatArray.reduce((acc, cur) => acc + cur, 0);
+// },0);
+// }
+//
+// console.log(
+//     sumNestedArrays([
+//         [1, 2],
+//         [3, 4, 5],
+//         [6, 7, 8, 9],
+//     ])
+// ); // Выведет: 45
+
+
+// 9 4)	Создайте функцию, которая принимает массив элементов и возвращает новый массив, содержащий только уникальные элементы, используя метод reduce.
+
+
+// const numbers = [1, 2, 3, 3, 4, 5, 5, 6];
+//
+// function removeDuplicates(arr) {
+//     return arr.reduce((acc, cur) => {
+//         if (!acc.includes(cur)) {
+//             acc.push(cur);
+//         }
+//         return acc;
+//     }, []);
+// }
+//
+// console.log(removeDuplicates(numbers)); // Выведет: [1, 2, 3, 4, 5, 6]
+
+
+// 10 Найдите дубликаты в массиве с помощью метода reduce и верните массив дублированных элементов
+
+// const array = [1, 2, 3, 2, 4, 5, 4, 5];
+//
+// function findDuplicates(arr) {
+//     const counts = arr.reduce((acc, cur) => {
+//         acc[cur] = (acc[cur] || 0) + 1;
+//         return acc;
+//     }, {});
+//
+//     return Object.keys(counts).filter(key => counts[key] > 1).map(Number);
+// }
+//
+// const duplicatesArray = findDuplicates(array);
+// console.log(duplicatesArray); // Output: [2, 4, 5]
+
+
+// 11 Создайте функцию, которая принимает массив объектов и возвращает массив значений определенного свойства объектов
+
+const people = [
+    {name: 'Alice', age: 25},
+    {name: 'Bob', age: 30},
+    {name: 'Charlie', age: 22},
+];
+
+function getPropertyValues(arr, prop) {
+    return arr.reduce((acc, obj) => {
+        acc.push(obj[prop]);
+        return acc;
+    }, []);
+}
+
+const names = getPropertyValues(people, 'name');
+console.log(names); // Output: ['Alice', 'Bob', 'Charlie']
+
+
+
+
+
+
 
 
 

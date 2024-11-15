@@ -78,13 +78,16 @@ const names = ['Max', 'Larisa', 'Andrey', 'Bogdan']
 // }
 
 // for off -> для массивов
-for (let name of names) {
-    console.log(name)
-}
+// for (let name of names) {
+//     console.log(name)
+// }
 
-for (const namesKey in names) {
-    console.log(namesKey)
-}
+// const copyDeveloper1={}
+// console.log(copyDeveloper1)
+// for (const key in developer1) {
+//  copyDeveloper1[key]=developer1[key]
+// }
+// console.log(copyDeveloper1)
 
 //7. Методы массивов
 /*
@@ -96,8 +99,41 @@ for (const namesKey in names) {
  */
 // forEach, map, filter
 
+// names.forEach((value, index, array) => {
+//     console.log('value:', value)
+//     console.log('index:', index)
+//     console.log('array:', array)
+//     console.log('-------------')
+// })
+
+// const upperFirstName = names.map((el) => {
+//     return el[0].toUpperCase() + el.slice(1)
+// })
+// console.log(upperFirstName)
+
+
+// const filteredNames = names.filter((el) => {
+//     return el[0] === 'M'
+// })
+// console.log(filteredNames)
+
+
+
+// reduce
+// const resReduce = numbers.reduce(()=>{}, нач значение) - это что она принимает, а коллбек принимает 4 параметра
+// const numbers = [1, 2, 3, 4, 5]
+// const res = numbers.reduce((acc,value,index,array) => {
+//     console.log('acc:',acc)
+//     console.log('value:',value)
+//     console.log('index:',index)
+//     console.log('array:',array)
+//     return acc + value
+//     console.log('-------------')
+// },0)
+// console.log(res)
+
 //8. Методы изменяющие исходный массив (мутирующие)
-// push pop shift unshift
+// push pop shift unshift reverse fill splice sort
 
 // ---------------------- Задачи --------------------------- //
 
@@ -208,65 +244,115 @@ const saruman = {
 /*
 1. Напишите функцию, которая принимает массив персонажей и выводит список имен персонажей.
  */
-const showCharacterName = characters => {
-};
-// console.log(showCharacterName(characters))
+// const showCharacterName = characters.map(el=> {
+//     return el.name
+// })
+// console.log(showCharacterName)
+
+
 
 /*
 2. Напишите функцию, которая принимает массив персонажей и выводит их всех в консоль.
 Если возраст персонажа равен "Unknown", то вместо него выведите строку "Возраст неизвестен".
  */
-const checkCharacterAge = characters => {
-};
-// console.log(checkCharacterAge(characters))
+// const checkCharacterAge = characters => {
+//     characters.forEach(character => {
+//         const age = character.age === 'Unknown' ? 'Возраст неизвестен' : character.age;
+//         console.log(`Имя: ${character.name}, Возраст: ${age}, Раса: ${character.race}, Дом: ${character.home}`);
+//     });
+// }
+//console.log(checkCharacterAge(characters))
 
 /*
 3.  Напишите функцию, которая будет добавлять нового персонажа в конец массива "characters" и возвращать обновленный массив.
 Добавить нужно объект saruman
  */
-const addCharacter = characters => {
-};
-// console.log(addCharacter(characters))
+
+
+// const addCharacter = (characters, newCharacter) => {
+//     characters.push(newCharacter);
+//     return characters;
+// };
+//
+// console.log(addCharacter(characters, saruman));
 
 /*
 4. Напишите функцию, которая принимает массив персонажей и выводит в консоль имена персонажей, у которых нет друзей.
  */
-const checkCharacterFriends = characters => {
-};
-// console.log(checkCharacterFriends(characters))
+// const checkCharacterFriends = characters => {
+//     characters.forEach(character => {
+//         if (character.friends.length === 0) {
+//             console.log(character.name);
+//         }
+//     });
+// };
+//
+// checkCharacterFriends(characters);
+
+
 
 /*
 5. Напишите функцию, которая принимает массив персонажей и выводит в консоль имена всех персонажей, которые не являются хоббитами.
  */
-const checkCharacterIsHobbit = characters => {
-};
-// console.log(checkCharacterIsHobbit(characters))
+// const checkCharacterIsHobbit = characters => {
+//     characters.forEach(characters=>{
+//         if(characters.race !=='Hobbit'){
+//             console.log(characters.name)
+//         }
+//     })
+// }
+// (checkCharacterIsHobbit(characters))
 
 /*
 6. Напишите функцию, которая принимает массив персонажей и выводит в консоль имена всех четных персонажей (id).
  */
-const checkCharacterIdIsEven = characters => {
-};
-// console.log(checkCharacterIdIsEven(characters));
+// const checkCharacterIdIsEven = characters => {
+//     characters.forEach(characters=>{
+//         if(characters.id%2===0){
+//             console.log(characters.name)
+//         }
+//     })
+// };
+// (checkCharacterIdIsEven(characters));
 
 /*
 7. Напишите функцию, которая принимает массив персонажей и проверяет, является ли он магом (имеет ли он в оружии "Staff").
 Если да, выведите сообщение "Этот персонаж является магом". Если нет, выведите сообщение "Этот персонаж не является магом".
 */
-const checkCharacterIsWizard = characters => {
-};
-// console.log(checkCharacterIsWizard(characters))
+// const checkCharacterIsWizard = characters => {
+//     characters.forEach(character => {
+//         if(character.weapons.includes('Staff')){
+//             console.log("Этот персонаж является магом")
+//         }else {
+//             console.log("Этот персонаж не является магом" ) 
+//         }
+//     })
+//    
+// };
+//  (checkCharacterIsWizard(characters))
 
 /*
 !*8!. Напишите функцию, которая принимает массив персонажей и меняет возраст персонажа "Sauron" на 100200 лет.
 */
-const changeSauronAge = characters => {
-};
-// console.log(changeSauronAge(characters))
+// const changeSauronAge = characters => {
+//     characters.forEach(character => {
+//        if (character.name === 'Sauron'){
+//             character.age = 100200
+//        }
+//     })
+// };
+// (changeSauronAge(characters))
+// console.log(characters)
 
 /*
 !**9!. Напишите функцию, которая принимает массив персонажей и находит персонажа с наибольшим количеством друзей.
 */
 const checkMaxFriends = characters => {
+    characters.forEach(character => {
+        if(character.friends){
+
+        }
+    })
 };
-// console.log(checkMaxFriends(characters))
+(checkMaxFriends(characters))
+console.log(characters)

@@ -9,18 +9,18 @@
 
 // Как наследовать свойства из одного объекта в другой?
 
-const student = {
-    name: 'Max',
-    age: 41
-    // __proto__ :{} new Object()
-}
-
-const mentor = {
-    isMentor: true
-}
-
-mentor.__proto__ = student
-console.log(mentor.__proto__)
+// const student = {
+//     name: 'Max',
+//     age: 41
+//     // __proto__ :{} new Object()
+// }
+//
+// const mentor = {
+//     isMentor: true
+// }
+//
+// mentor.__proto__ = student
+// console.log(mentor.__proto__)
 
 // -------- 1 способ -------
 // console.log(student)
@@ -37,11 +37,8 @@ console.log(mentor.__proto__)
 // console.log(mentor1.name)
 
 
-
-
 // Чем может быть равен __proto__?
 // Объект либо null
-
 
 
 // У кого есть __proto__?
@@ -67,17 +64,43 @@ const man2 = {}  // new Object()
 // console.log(a1.__proto__.__proto__.__proto__)
 
 
-
-
-
 //=============================prototype==================================
 // функции-конструкторы в JS встроенные какие знаете?
+function Car(brand) {
+    this.brand = brand
+}
+
+const isPremiumCar = {
+    isPremium: true,
+    getBrand() {
+        return this.brand
+    }
+}
+Car.prototype = isPremiumCar
+const bmw = new Car('bmw')
+console.log(bmw.getBrand())
+
+
+
 
 
 // У кого есть свойство prototype?
 
+// __proto__ есть у всех объектов
+// prototype - есть у функций и классов
+
+
+
+
 
 // Какая связь между __proto__ и prototype?
+
+
+
+
+
+
+
 
 
 // Посмотри с помощью чего созданы все типы данных

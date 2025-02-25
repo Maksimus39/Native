@@ -66,22 +66,19 @@ const man2 = {}  // new Object()
 
 //=============================prototype==================================
 // функции-конструкторы в JS встроенные какие знаете?
-function Car(brand) {
-    this.brand = brand
-}
-
-const isPremiumCar = {
-    isPremium: true,
-    getBrand() {
-        return this.brand
-    }
-}
-Car.prototype = isPremiumCar
-const bmw = new Car('bmw')
-console.log(bmw.getBrand())
-
-
-
+// function Car(brand) {
+//     this.brand = brand
+// }
+//
+// const isPremiumCar = {
+//     isPremium: true,
+//     getBrand() {
+//         return this.brand
+//     }
+// }
+// Car.prototype = isPremiumCar
+// const bmw = new Car('bmw')
+// console.log(bmw.getBrand())
 
 
 // У кого есть свойство prototype?
@@ -90,17 +87,7 @@ console.log(bmw.getBrand())
 // prototype - есть у функций и классов
 
 
-
-
-
 // Какая связь между __proto__ и prototype?
-
-
-
-
-
-
-
 
 
 // Посмотри с помощью чего созданы все типы данных
@@ -111,6 +98,19 @@ console.log(bmw.getBrand())
 
 //=============================Прототипы для функции-конструктора==================================
 // Написать функцию конструктор
+function Car() {
+    // this.brand = brand
+}
+
+Car.prototype.incubator = 100200
+
+const bmw = new Car('bmw')
+console.log(bmw.incubator)
+
+
+
+
+
 
 
 // Задание свойства в прототип для функции-конструктора
